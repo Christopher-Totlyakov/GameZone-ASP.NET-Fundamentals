@@ -3,35 +3,19 @@
 This project is part of the **ASP.NET Core Fundamentals** course at **SoftUni**. It is an online platform called **GameZone**, where console game enthusiasts can exchange information about different games. Registered users have their own zones with favorite games.
 
 ## Table of Contents
-1. [Technological Requirements and Overview](#technological-requirements-and-overview)
-2. [Identity Requirements](#identity-requirements)
-3. [Database Requirements](#database-requirements)
-4. [Page Requirements](#page-requirements)
-5. [Functionality](#functionality)
-6. [Security](#security)
-7. [Code Quality](#code-quality)
-8. [Scoring](#scoring)
-9. [Installation](#installation)
+1. [Identity Requirements](#identity-requirements)
+2. [Database Requirements](#database-requirements)
+3. [Page Requirements](#page-requirements)
+4. [Functionality](#functionality)
+5. [Security](#security)
+6. [Code Quality](#code-quality)
+7. [Scoring](#scoring)
+8. [Installation](#installation)
 
-## Technological Requirements and Overview
-
-- Use the provided skeleton: **GameZone-Skeleton.zip**
-- All required packages have already been installed.
-- The skeleton contains:
-  - Areas/Identity/Pages: Scaffold Identity here.
-  - Controllers: Implement controller logic.
-  - Data: Contains entities models.
-  - Models: Implement models here.
-  - Views: Provided views where logic related to user authentication needs to be implemented.
-  - `appsettings.json`: Make sure to update your connection string.
-  - `Program.cs`: Implement security and password requirements.
-  
-**Important Note:** Seed the database with pre-defined data for the **Genre** entity. Uncomment the code inside `OnModelCreating` in `GameZoneDbContext`.
 
 ## Identity Requirements
 
 - Scaffold Identity and use the default **IdentityUser**.
-- Remove unnecessary code from the `Login.cshtml` and `Register.cshtml` files. Keep only the necessary code for login and registration functionality.
 - Password requirements:
   - Confirmed account: **false**
   - Require digits: **false**
@@ -68,18 +52,48 @@ Implement the entities with the correct data types and relations. You may use th
 ## Page Requirements
 
 - **Index Page (logged-out user)**
+  ![image](https://github.com/user-attachments/assets/5590ba4e-2aa9-42c1-9656-25c089d63dea)
+
 - **Login Page (logged-out user)**
+  ![image](https://github.com/user-attachments/assets/202cd3da-fc63-4d14-a364-744d23eb78ba)
+
 - **Register Page (logged-out user)**
+ ![image](https://github.com/user-attachments/assets/98b9cee6-453f-4380-bfa3-072b60668353)
+
 - **/Game/Add (logged-in user)**
+ ![image](https://github.com/user-attachments/assets/ac15977a-1917-4376-8af3-870131d38bb5)
+
 - **/Game/All (logged-in user, publisher of a specific game)**
+  ![image](https://github.com/user-attachments/assets/35666fb3-2758-483d-97cf-c6b8fccd0dea)
+
 - **/Game/All (logged-in user, not publisher of any game)**
+![image](https://github.com/user-attachments/assets/bd6515b4-2631-4a1e-a4a2-358475bceb5a)
+
 - **/Game/MyZone (logged-in user)**
+![image](https://github.com/user-attachments/assets/91cf01e0-fc54-4172-9cc2-b2e4943eb08f)
+![image](https://github.com/user-attachments/assets/a61d2035-add2-421a-98ff-6650c8f649c6)
+
+
 - **/Game/Edit/{id} (logged-in user)**
+![image](https://github.com/user-attachments/assets/1509d509-754b-4098-9aea-b8d52aa6d2f8)
+
+
 - **/Game/AddToMyZone?id={id} (logged-in user)**
+  - Adds the selected game to the user's collection of games. If the game is already in their collection, it shouldn't be added. If everything is successful, the user must be redirected to their collection "/Game/MyZone" page.
 - **/Game/StrikeOut?id={id} (logged-in user)**
+  - Removes the selected game from the user's collection of games. If everything is successful, the user must be redirected to "/Game/MyZone" page.
+NOTE: The templates should look EXACTLY as shown above.
+ ![image](https://github.com/user-attachments/assets/81705ab7-5989-4735-95c6-a52e4d578eab)
+
 - **Game/Details/{id} (logged-in user, publisher of a game)**
+ ![image](https://github.com/user-attachments/assets/c46754d9-fe22-48ba-be1e-51c9ee1b7e92)
+
 - **Game/Details/{id} (logged-in user, not a publisher of a game)**
+ ![image](https://github.com/user-attachments/assets/b9f4e2f4-66f1-43f4-966b-4bcae837347e)
+
 - **Game/Delete/{id} (logged-in user, publisher of a game)**
+  ![image](https://github.com/user-attachments/assets/4a7e7d52-69f3-4be3-8ce4-5339779adf97)
+
 
 ## Functionality
 
